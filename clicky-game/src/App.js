@@ -1,5 +1,5 @@
 import React from 'react';
-import GameCards from '../components/game-cards'
+import GameCards from './game-cards'
 import cards from '../src/card.json'
 import logo from './logo.svg';
 import './App.css';
