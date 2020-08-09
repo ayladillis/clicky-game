@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
+import Footer from "./components/Footer/Footer";
 import GameCards from './game-cards';
 import cards from '../src/card.json';
 import logo from './logo.svg';
@@ -13,6 +14,7 @@ function App() {
     <div className="container">
       <Navbar />
       <Jumbotron />
+      <Footer />
     </div>
   );
 }
