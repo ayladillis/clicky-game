@@ -1,68 +1,76 @@
 import React from 'react';
-// import Navbar from "./components/Bootstrap/Navbar";
-// import Jumbotron from "./components/Bootstrap/Jumbotron";
+import Navbar from "./components/Navbar/Navbar";
+import Jumbotron from "./components/Jumbotron/Jumbotron";
 import GameCards from './game-cards';
 import cards from '../src/card.json';
 import logo from './logo.svg';
-import './App.css';
+import './App';
 
 
-class App extends React.Component {
 
-  state = {
-    count: 0,
-    cards: [],
-  };
-
-
-  componentDidMount()
-   {
-     this.setState({ cards });
-   }
-
-  shuffle = () => {
-    const newCards = this.state.cards;
-    this.setState({
-      cards: newCards.sort(card => {
-        const change = Math.random();
-
-        if (change > .5) {
-          return 1;
-        }
-        if (change < .5) {
-          return -1;
-        }
-
-        return 0;
-      })
-    })
-  }
-  handleIncrement = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
-
- 
-  
-
-    render(){
-    return (
-        <div>
-          {/* <Navbar />
-          <Jumbotron /> */}
-        
-          {cards.map(card => (
-            <GameCards
-              key={card.id}
-              image={card.image}
-              shuffle={this.shuffle}
-              />
-          ))}
-        </div>
-    )
-  }
+function App() {
+  return (
+    <div className="container">
+      <Navbar />
+      <Jumbotron />
+    </div>
+  );
 }
 
-
-
-
 export default App;
+
+
+// class App extends React.Component {
+
+//   state = {
+//     count: 0,
+//     cards: [],
+//   };
+
+
+//   componentDidMount()
+//    {
+//      this.setState({ cards });
+//    }
+
+//   shuffle = () => {
+//     const newCards = this.state.cards;
+//     this.setState({
+//       cards: newCards.sort(card => {
+//         const change = Math.random();
+
+//         if (change > .5) {
+//           return 1;
+//         }
+//         if (change < .5) {
+//           return -1;
+//         }
+
+//         return 0;
+//       })
+//     })
+//   }
+//   handleIncrement = () => {
+//     this.setState({ count: this.state.count + 1 });
+//   };
+
+//     render(){
+//     return (
+//         <div>
+//           {cards.map(card => (
+//             <GameCards
+//               key={card.id}
+//               image={card.image}
+//               shuffle={this.shuffle}
+//               />
+//           ))}
+//         </div>        
+
+//     )
+//   }
+// }
+
+
+// export default App;
+
+
