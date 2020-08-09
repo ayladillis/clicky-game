@@ -1,6 +1,8 @@
 import React from 'react';
-import GameCards from './game-cards'
-import cards from '../src/card.json'
+// import Navbar from "./components/Bootstrap/Navbar";
+// import Jumbotron from "./components/Bootstrap/Jumbotron";
+import GameCards from './game-cards';
+import cards from '../src/card.json';
 import logo from './logo.svg';
 import './App.css';
 
@@ -39,9 +41,15 @@ class App extends React.Component {
     this.setState({ count: this.state.count + 1 });
   };
 
+ 
+  
+
     render(){
     return (
         <div>
+          {/* <Navbar />
+          <Jumbotron /> */}
+        
           {cards.map(card => (
             <GameCards
               key={card.id}
@@ -53,6 +61,8 @@ class App extends React.Component {
     )
   }
 }
+
+
 
 
 export default App;
