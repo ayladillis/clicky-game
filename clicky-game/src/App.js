@@ -41,15 +41,15 @@ class App extends React.Component {
 
     render(){
     return (
-      <div>
-        {cards.map(card => (
-          <GameCards
-            key={card.id}
-            image={card.image}
-            shuffle={this.shuffle}
-            />
-        ))}
-      </div>
+        <div>
+          {cards.map(card => (
+            <GameCards
+              key={card.id}
+              image={card.image}
+              shuffle={this.shuffle}
+              />
+          ))}
+        </div>
     )
   }
 }

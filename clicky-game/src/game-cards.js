@@ -1,14 +1,18 @@
 import React from "react";
 import "./style.css";
+import Wrapper from "./Wrapper";
+
+
 
 function card(props) {
-    // onClick functions when img is clicked
     return (
+    <Wrapper>
         <div className="card" onClick={function(){props.shuffle();}}>
             <div className="img-container">
                 <img src={props.image}/>
             </div>
         </div>
+    </Wrapper>
     );
 };
 
