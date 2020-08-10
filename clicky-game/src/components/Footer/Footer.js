@@ -5,7 +5,7 @@ function Footer() {
   return (
 <div>
   <div className="card-body">
-      <footer>Sports Memory Game</footer>
+      <footer>Gecko Memory Game</footer>
   </div>
 </div>
 

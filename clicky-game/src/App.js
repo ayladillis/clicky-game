@@ -13,8 +13,8 @@ function App() {
     <div className="container">
       <Navbar />
       <Jumbotron />
-      <Footer />
       <Cards />
+      <Footer />
     </div>
   );
 }
