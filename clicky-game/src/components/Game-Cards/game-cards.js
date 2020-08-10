@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Wrapper from "./components/Wrapper/Wrapper";
+import Wrapper from "../Wrapper/Wrapper";
 
 
 
