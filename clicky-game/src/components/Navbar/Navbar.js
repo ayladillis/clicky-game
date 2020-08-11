@@ -6,7 +6,7 @@ function Navbar(prop) {
   <nav className="navbar fixed-top">
         <h2>Gecko Memory Game</h2>
         <h2 className="begin">Click an Image to Begin!</h2>
-        <h2>Score:{prop.count}| Top Score:</h2>
+        <h2>Score:{prop.count}</h2>
   </nav>
   );
 }
