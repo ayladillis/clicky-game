@@ -1,12 +1,12 @@
 import React from "react";
 import "./Navbar.css"
 
-function Navbar() {
+function Navbar(prop) {
   return (
   <nav className="navbar fixed-top">
-        <h2>Geckos Memory Game</h2>
+        <h2>Gecko Memory Game</h2>
         <h2 className="begin">Click an Image to Begin!</h2>
-        <h2>Score</h2>
+        <h2>Score:{prop.count}| Top Score:</h2>
   </nav>
   );
 }

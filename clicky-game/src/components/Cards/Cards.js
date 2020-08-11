@@ -1,6 +1,8 @@
 import React from 'react';
 import GameCards from '../Game-Cards/game-cards';
 import cards from '../../card.json';
+import Navbar from "../Navbar/Navbar";
+
 
 
 
@@ -9,6 +11,7 @@ class App extends React.Component {
     state = {
       count: 0,
       cards: [],
+      clickedImg: []
     };
   
   
@@ -34,21 +37,38 @@ class App extends React.Component {
         })
       })
     }
-    handleIncrement = () => {
-      this.setState({ count: this.state.count + 1 });
-    };
+
+    handleIncrement = (card) => {
+      if (this.state.clickedImg.indexOf(card) === -1) {
+      this.setState({
+        count: this.state.count + 1,
+        clickedImg: [...this.state.clickedImg, card]
+      }) 
+      
+      }else {
+        this.setState({ count: this.state.count - 1 }) } 
+      }
+
+    
   
       render(){
       return (
-          <div>
+        <div>
+          < Navbar 
+            count={this.state.count}
+            />
+          <div className="row">
             {cards.map(card => (
               <GameCards
                 key={card.id}
                 image={card.image}
                 shuffle={this.shuffle}
+                handleIncrement={this.handleIncrement}
+                id={card.id}
                 />
             ))}
-          </div>        
+          </div>
+        </div>        
   
       )
     }
