@@ -1,6 +1,6 @@
 # Clicky-Game
 
-This is a memory game where to goal is to not click on any one pictures twice, score is kept by increasing when the user correctly selects different images and decreasing when the user clicks on one image twice. 
+This is a memory game where to goal is to not click on any one pictures twice, score is kept by increasing when the user correctly selects different images and resetting the score to zero if the user clicks on one image twice. 
 
 ![Web Screenshot](./images/Clicky-game.png)
 
