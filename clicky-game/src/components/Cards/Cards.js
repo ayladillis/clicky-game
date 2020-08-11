@@ -46,7 +46,7 @@ class App extends React.Component {
       }) 
       
       }else {
-        this.setState({ count: this.state.count - 1 }) } 
+        this.setState({ count: 0 }) } 
       }
 
     
